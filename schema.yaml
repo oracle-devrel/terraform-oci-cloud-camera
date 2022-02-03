@@ -1,0 +1,69 @@
+title: Cloud Camera Compute on Oracle Cloud
+description: The computing infrastructure used for processing video streams.
+schemaVersion: 1.1.0
+version: 1.0
+locale: en
+variableGroups:
+  - title: "Hidden"
+    variables:
+      - ${tenancy_ocid}
+      - ${user_ocid}
+      - ${region}
+      - ${fingerprint}
+      - ${private_key_path}
+      - ${private_key_password}
+      - ${private_key}
+      - ${region}
+      - ${compartment_ocid}
+      - ${ssh_pub_key_path}
+      - ${compute_image_name}
+    visible: false
+  - title: "Configuration"
+    variables:
+      - ${compute_shape}
+      - ${udp_service_port}
+      - ${permitted_access_cidrs}
+  - title: "Credentials"
+    variables:
+      - ${ssh_pub_key}
+      - ${opc_passwd}
+      - ${vnc_passwd}
+
+variables:
+  udp_service_port:
+    type: number
+    title: UDP Service Port
+    description: The UDP port to use for the UDP stream.
+    required: true
+  vnc_passwd:
+    type: password
+    title: VNC Password
+    description: The password to setup for VNC to use.
+    required: true
+  opc_passwd:
+    type: password
+    title: OPC Password
+    description: The password to setup for the OPC user.
+    required: true
+  ssh_pub_key:
+    title: Compute SSH Public Key
+    description: The public key to install on the compute for SSH access.
+    type: oci:core:ssh:publickey
+    required: true
+  compute_shape:
+    title: Compute Shape
+    type: oci:core:instanceshape:name
+    description: The type of Compute instance shape to use.
+    required: true
+    dependsOn:
+      compartmentId: ${compartment_ocid}
+  permitted_access_cidrs:
+    title: CIDR to Permit Access
+    type: array
+    items:
+      type: string
+    uniqueItems: true
+    description: The CIDR(s) to permit access to the resources.
+    required: true
+    dependsOn:
+      compartmentId: ${compartment_ocid}

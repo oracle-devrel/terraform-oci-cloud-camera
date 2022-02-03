@@ -1,0 +1,16 @@
+# Copyright (c) 2022 Oracle and/or its affiliates.
+
+region = "<your_region_here>"
+compartment_ocid = "<your_compartment_ocid_here>"
+user_ocid = "<your_user_ocid_here>"
+tenancy_ocid = "<your_tenancy_ocid_here>"
+private_key_path     = "<your_API_private_key_here>"
+private_key_password = "<your_API_private_key_password_here>" # or set via env var
+# "API Key" fingerprint, more details can be found at https:#docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/credentials.htm#two
+fingerprint = "<your_API_private_key_fingerprint_here>"
+
+ssh_pub_key_path = "<path_to_SSH_public_key>"
+
+opc_passwd = "<your_opc_password_here>"
+vnc_passwd = "<your_vnc_passwordhere>"
+permitted_access_cidrs = [ "cidr_1", "cidr_2" ]

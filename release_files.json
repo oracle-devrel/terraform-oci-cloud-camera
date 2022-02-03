@@ -1,3 +1,24 @@
 // see https://github.com/oracle-devrel/action-release-zip-maker for docs
 [
+  {
+    "action": "create_zip",
+    "file_name": "terraform-oci-cloud-camera-orm.zip",
+    "files": [
+      {
+        "src_pattern": "*.tf",
+        "dst_path": ".",
+      },
+      {
+        "src": "LICENSE"
+      },
+      {
+        "src": "schema.yaml",
+        "dst": "schema.yaml"
+      }
+    ]
+  },
+  {
+    "action": "upload_file",
+    "file_name": "terraform-oci-cloud-camera-orm.zip"
+  }
 ]
