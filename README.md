@@ -22,7 +22,7 @@ As far as specific Network Security Group policies, here's a highlight (see `nsg
 It's pretty basic, but provides a solid foundation for future iteration and work in handling video feeds.
 
 ## Getting Started
-You must have an OCI account.  [Click here](https://www.oracle.com/cloud/free/?source=:ex:tb:::::WWMK211208P00078&SC=:ex:tb:::::WWMK211208P00078&pcode=WWMK211208P00078) to create a new cloud account.
+You must have an OCI account.  [Click here](https://www.oracle.com/cloud/free/?source=:ex:tb:::::WWMK220120P00033&SC=:ex:tb:::::WWMK220120P00033&pcode=WWMK220120P00033) to create a new cloud account.
 
 There are a couple of options for deploying this project:
 * Oracle Cloud Resource Manager
@@ -70,7 +70,7 @@ Once the project is deployed, you will want to SSH to the Compute instance.  Her
 Congratulations - you're connected and ready to have fun with it!
 
 ### Prerequisites
-You must have an OCI account.  [Click here](https://www.oracle.com/cloud/free/?source=:ex:tb:::::WWMK211208P00078&SC=:ex:tb:::::WWMK211208P00078&pcode=WWMK211208P00078) to create a new cloud account.
+You must have an OCI account.  [Click here](https://www.oracle.com/cloud/free/?source=:ex:tb:::::WWMK220120P00033&SC=:ex:tb:::::WWMK220120P00033&pcode=WWMK220120P00033) to create a new cloud account.
 
 ## Requirements
 
