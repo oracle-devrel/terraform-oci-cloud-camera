@@ -40,4 +40,7 @@ locals {
   latest_ol8_image_id = data.oci_core_images.latest_ol8.images[0].id
   compute_image_id    = try(length(var.compute_image_name), 0) > 0 ? try(data.oci_core_images.specified.id, local.latest_ol8_image_id) : local.latest_ol8_image_id
   compute_shape       = var.compute_shape
+  
+  ad_number = var.ad_number - 1
+  ad_name   = data.oci_identity_availability_domains.ads.availability_domains[local.ad_number].name
 }

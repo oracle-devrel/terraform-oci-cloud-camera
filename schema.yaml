@@ -20,6 +20,7 @@ variableGroups:
     visible: false
   - title: "Configuration"
     variables:
+      - ${ad_number}
       - ${compute_shape}
       - ${udp_service_port}
       - ${permitted_access_cidrs}
@@ -30,6 +31,15 @@ variableGroups:
       - ${vnc_passwd}
 
 variables:
+  ad_number:
+    type: enum
+    title: Administrative Domain Number
+    description: The AD number to deploy to (1 = AD1, 2 = AD2, 3 = AD3).
+    required: true
+    enum:
+      - 1
+      - 2
+      - 3
   udp_service_port:
     type: number
     title: UDP Service Port
