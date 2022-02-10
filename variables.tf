@@ -53,6 +53,10 @@ variable "compute_shape" {
   description = "See https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm for the different compute shapes available."
   default     = "VM.Standard.A1.Flex"
 }
+variable "ad_number" {
+  type        = number
+  description = "The AD number to deploy the Compute instance in.  1 = AD1, 2 = AD2, 3 = AD3."
+}
 
 variable "permitted_access_cidrs" {
   type        = list(string)

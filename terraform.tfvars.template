@@ -14,3 +14,4 @@ ssh_pub_key_path = "<path_to_SSH_public_key>"
 opc_passwd = "<your_opc_password_here>"
 vnc_passwd = "<your_vnc_passwordhere>"
 permitted_access_cidrs = [ "cidr_1", "cidr_2" ]
+ad_number = <AD number>

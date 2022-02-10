@@ -1,7 +1,7 @@
 # Copyright (c) 2021 Oracle and/or its affiliates.
 
 resource "oci_core_instance" "cloud_camera" {
-  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
+  availability_domain = local.ad_name
   compartment_id      = var.compartment_ocid
   display_name        = "cloud_camera"
   shape               = local.compute_shape
